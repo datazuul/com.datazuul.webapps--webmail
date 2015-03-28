@@ -1,0 +1,51 @@
+<wicket:extend>
+	<div id="left">
+	<ul>
+		<li wicket:id="folders"><a href="#" wicket:id="folderLink"><span wicket:id="name">[foldername]</span></a>
+			<ul>
+			<li wicket:id="subFolders"><a href="#" wicket:id="folderLink"><span wicket:id="name">[foldername]</span></a></li>
+			</ul>
+		</li>
+	</ul>
+	</div>
+	
+	<div id="right">
+	<div id="mailList">
+	<span wicket:id="navigator">[dataview navigator]</span>
+	<table cellspacing="0" class="dataview">
+		<thead>
+			<tr>
+				<!-- <th>&nbsp;</th> -->
+				<!-- <th>ID</th> -->
+				<th>&nbsp;</th>
+				<th>&nbsp;</th>
+				<th>Absender</th>
+				<th>Betreff</th>
+				<th>Datum</th>
+				<th>Grösse</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr wicket:id="items">
+				<!-- <td><span xwicket:id="id">[id]</span></td> -->
+				<td><span wicket:id="actions">[actions]</span></td>
+				<td>
+				<img src="mail-answered-16x16.png" title="beantwortet" wicket:id="flagAnswered"/>
+				<img src="mail-unread-16x16.png" title="ungelesen" wicket:id="flagUnread"/>
+				<img src="mail-read-16x16.png" title="gelesen" wicket:id="flagRead"/>
+				<img src="attachment.gif" title="Anhang vorhanden" wicket:id="flagAttachment"/>
+				</td>
+				<td><span wicket:id="from">[from]</span></td>
+				<td><a href="#" wicket:id="subjectLink"><span wicket:id="subjectText">[subject]</span></a></td>
+				<td><span wicket:id="date">[date]</span></td>
+				<td class="right"><span wicket:id="size">[size]</span> kB</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	
+	<span wicket:id="mailViewPanel">blablabla...</span>
+
+	</div>
+	
+</wicket:extend>

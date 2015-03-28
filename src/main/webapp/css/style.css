@@ -1,0 +1,103 @@
+div#left {
+	border: solid 1px #000;
+	float: left;
+	width: 15%;
+}
+
+div#right {
+	float: right;
+	width: 84%;
+}
+
+div#mailList {
+	border: solid 1px #000;
+	clear:both;
+	padding: 5px;
+}
+div#mailViewPanel {
+	background-color: #DDD;
+	clear: both;
+	border: solid 1px #000;
+	margin: 10px 0px 0px 0px;
+	width: 100%;
+}
+div#mailHeader {
+	margin: 5px;
+}
+div#mailHeader th, div#mailHeader td {
+	font-family: sans-serif;
+	font-size: 12px;
+}
+div#mailText {
+	background-color: #FFF;
+	clear: both;
+	border: solid 1px #AAA;
+	font-family: monospace;
+	font-size: 12px;
+	height: 300px;
+	margin: 0px 5px 0px 5px;
+	overflow: auto;
+	padding: 2px;
+}
+
+table.dataview {
+	/* Bug since 2002 with overflow-y: auto on tbody */
+	/* border: 1px solid #000; */
+	/*  border-collapse: collapse; */
+	
+	/* workaround: */
+	border-collapse: separate;      /* by default */
+	border-spacing: 0;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+	border-top: 1px solid #000;
+	
+	font-family: sans-serif;
+	font-size: 12px;
+	width: 100%;	
+}
+
+table.dataview thead tr th {
+	background: #CCC;
+	
+	/*	border: 1px solid #000; */
+	border-left: 1px solid #000;    /* workaround */
+	border-bottom: 1px solid #000;  /* workaround */
+	
+	margin: 0px;
+	padding: 2px 5px;
+	text-align: left;
+}
+table.dataview tbody {
+/*	height: 40px; */
+	height: 300px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+table.dataview tbody tr td {
+	background: #FFF;
+	
+	/*	border: 1px solid #000; */
+	border-left: 1px solid #000;    /* workaround */
+	border-bottom: 1px solid #000;  /* workaround */
+	
+	margin: 0px;
+	padding: 2px 5px;
+}
+
+/* rows marked as deleted */
+tr.d td {
+	background-color: pink !important;
+	font-style: italic;
+	/* text-decoration: line-through; */
+}
+/* rows marked as unread */
+tr.u td {
+	font-weight: bold;
+}
+
+td.right {
+	text-align: right;
+	padding-right: 17px !important;
+}
